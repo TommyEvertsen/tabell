@@ -17,10 +17,10 @@ return new class () extends Migration {
             $table->float('dimension');
             $table->float('length');
             $table->string('ID/OD');
-            $table->foreignId('stativs_id')->constrained('owners')->cascadeOnDelete();
+            $table->foreignId('stativs_id')->constrained('stativs')->cascadeOnDelete();
             $table->string('inner_outer');
-            $table->foreignId('stativs_rows')->constrained('owners')->cascadeOnDelete();
-            $table->foreignId('stativs_columns')->constrained('owners')->cascadeOnDelete();
+            $table->foreignId('stativs_rows')->constrained('stativs')->cascadeOnDelete();
+            $table->foreignId('stativs_columns')->constrained('stativs')->cascadeOnDelete();
            
 
         });
